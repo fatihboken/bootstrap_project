@@ -2,12 +2,14 @@
     --primary-color:#bc6c25;
     --secondary-color:#4d3822;
     --hover-color:#e76f51;
+    --section-color:#B78752;
 
 }
 
 
 *{
     font-family: "Plus Jakarta Sans", sans-serif;
+    scroll-behavior: smooth;
     
 }
 
@@ -74,6 +76,10 @@
 .carousel-caption .btn:first-child{
     background-color: transparent;
 }
+.carousel-caption .btn:first-child:hover{
+    background-color: white;
+    color: black;
+}
 
 .hero{
     position: relative;
@@ -81,8 +87,8 @@
 }
 
 .black{
-    width: 350px;
-    height: 400px;
+    width: 450px;
+    height: 500px;
     background-color: rgba(0, 0, 0, 0.809);
     position: absolute;
     top: 50%;
@@ -136,4 +142,97 @@ section#about{
 section#about button{
     background-color: var(--primary-color);
     border: none;
+}
+
+/*! PEOPLE */
+
+section#people{
+    background-color: var(--section-color);
+}
+section#people .container{
+    background-color: var(--secondary-color);
+}
+section#people .card{
+    background-color: var(--primary-color);
+    transition: all .5s;
+    overflow: hidden;
+}
+section#people .card:hover{
+    transform: scale(1.05);
+}
+section#people .card img{
+    transition: all 0.5s;
+}
+section#people .card img:hover{
+    transform: scale(1.1);
+}
+
+section#people i{
+    transition: all .5s;
+}
+section#people i:hover{
+    opacity: .5;
+}
+
+/*! Menu */
+
+section#menu{
+    background-color: var(--secondary-color) !important;
+}
+section#menu button{
+    background-color: var(--secondary-color) !important;
+    margin-right: 1rem;
+}
+section#menu .container{
+    background-color: var(--primary-color) !important;
+}
+
+section#menu .menu-header{
+    color: var(--primary-color);
+}
+
+/*! Contact */
+
+section#contact{
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.509),
+        rgba(188, 108, 37, 1)
+    ), url(../img/slider2.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+section#contact input, section#contact textarea{
+    background-color: inherit;
+}
+section#contact input:focus, section#contact textarea:focus{
+    background-color: var(--primary-color);
+}
+
+label{
+    color: white;
+    font-style: italic;
+}
+
+textarea{
+    resize: none;
+    height: 100px !important;
+}
+
+input::placeholder{
+    color: white !important;
+}
+
+.google-map{
+    filter: grayscale(100);
+    border-radius: 20px;
+}
+
+/*! Footer */
+
+footer{
+    background-color: var(--primary-color);
 }
